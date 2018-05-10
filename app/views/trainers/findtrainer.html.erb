@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trainers</h1>
+
+<%= link_to 'New Trainer', new_trainer_path %> &nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "http://localhost:3000/clients">Back to Client List</a>
+<br>
+<br>
+
+<%= form_tag "/trainers/findtrainer" do %>
+        <%= text_field_tag :search_trainer %>
+        <%=submit_tag :search%>
+        <%end%>
+        <br/>
+		
+<table id = "workout">
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Address</th>
+      <th colspan="4">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trainersearch.each do |trainersfind| %>
+      <tr>
+        <td><%= trainersfind.Full_Name %></td>
+        <td><%= trainersfind.Address %></td>
+        <td><%= link_to 'Show Full Profile', trainersfind %></td>
+        <td><%= link_to 'Edit Profile', edit_trainer_path(trainersfind) %></td>
+        <td><%= link_to 'Delete Profile', trainersfind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><a href = "http://localhost:3000/trainers/<%=trainersfind.id%>/trainersclient">View His/Her Client(s)</a></td>
+		</tr>
+    <% end %>
+  </tbody>
+</table>

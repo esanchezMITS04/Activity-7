@@ -1,0 +1,47 @@
+<%= form_with(model: trainer, local: true) do |form| %>
+  <% if trainer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trainer.errors.count, "error") %> prohibited this trainer from being saved:</h2>
+
+      <ul>
+      <% trainer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Full_Name %>
+    <%= form.text_field :Full_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Address %>
+    <%= form.text_field :Address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Current_Weight_KG %>
+    <%= form.number_field :Current_Weight_KG %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Height_CM %>
+    <%= form.number_field :Height_CM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gender %>
+    <%= form.text_field :Gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Email_Address %>
+    <%= form.text_field :Email_Address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

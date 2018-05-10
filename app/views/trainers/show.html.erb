@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @trainer.Full_Name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @trainer.Address %>
+</p>
+
+<p>
+  <strong>Current weight kg:</strong>
+  <%= @trainer.Current_Weight_KG %>
+</p>
+
+<p>
+  <strong>Height cm:</strong>
+  <%= @trainer.Height_CM %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @trainer.Gender %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @trainer.Email_Address %>
+</p>
+
+<%= link_to 'Edit', edit_trainer_path(@trainer) %> |
+<%= link_to 'Back', trainers_path %>

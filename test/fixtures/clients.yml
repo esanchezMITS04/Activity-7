@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Full_Name: MyString
+  Trainor: MyString
+  Address: MyString
+  Current_Weight_KG: 1
+  Height_CM: 1
+  Gender: MyString
+  Email_Address: MyString
+
+two:
+  Full_Name: MyString
+  Trainor: MyString
+  Address: MyString
+  Current_Weight_KG: 1
+  Height_CM: 1
+  Gender: MyString
+  Email_Address: MyString
